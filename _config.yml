@@ -1,0 +1,12 @@
+# Site settings
+title: 温舍
+email: sherwinkoo@126.com
+description: > # this means to ignore newlines until "baseurl:"
+    人生苦短，我用Python
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.sherwinkoo.net" # the base hostname & protocol for your site
+twitter_username: sherwinkoo
+github_username:  sherwinkoo
+
+# Build settings
+markdown: kramdown
