@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>温舍</title>
+    <description>人生苦短，我用Python
+</description>
+    <link>http://blog.sherwinkoo.net/</link>
+    <atom:link href="http://blog.sherwinkoo.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 06 Oct 2015 18:43:30 +0800</pubDate>
+    <lastBuildDate>Tue, 06 Oct 2015 18:43:30 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Linux知识集锦</title>
+        <description>&lt;h2 id=&quot;ssh&quot;&gt;&lt;strong&gt;一、SSH&lt;/strong&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;ssh-1&quot;&gt;1. SSH中文乱码&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;原因：&lt;/em&gt;&lt;/strong&gt;
+这通常是由于服务器locale使用本地locale，但是服务器并没有安装相关语言包导致的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;解决方法：&lt;/em&gt;&lt;/strong&gt;
+在&lt;code&gt;/etc/ssh/ssh_config&lt;/code&gt;中，把&lt;code&gt;SendEnv LANG LC_*&lt;/code&gt;这一行注释掉即可。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Oct 2015 02:30:00 +0800</pubDate>
+        <link>http://blog.sherwinkoo.net/linux/2015/10/07/linux-skills.html</link>
+        <guid isPermaLink="true">http://blog.sherwinkoo.net/linux/2015/10/07/linux-skills.html</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 05 Oct 2015 06:27:03 +0800</pubDate>
+        <link>http://blog.sherwinkoo.net/jekyll/update/2015/10/05/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://blog.sherwinkoo.net/jekyll/update/2015/10/05/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>SSH远程端口转发</title>
+        <description>&lt;h1 id=&quot;一、SSH远程端口转发技术&quot;&gt;一、SSH远程端口转发技术&lt;/h1&gt;
+&lt;h2 id=&quot;1-_场景需求&quot;&gt;1. 场景需求&lt;/h2&gt;
+&lt;p&gt;有台外网服务器A，一台内网机器B；也就是说B可以访问A，但是A是无法访问B的。由于做微信开发，微信服务器会推送消息到指定URL，所以必须得在外网机器中才能进行测试，但是直接在外网机器中做开发是不现实的，那么问题来了：端口转发哪家强？&lt;/p&gt;
+&lt;h2 id=&quot;2-_原理&quot;&gt;2. 原理&lt;/h2&gt;
+&lt;p&gt;通过搜索，查看SSH的手册，以及多次的实验，终于明白了使用SSH进行端口转发的方法。在介绍SSH的端口转发之前，我们可以自己思考一下，该如何实现这样一个功能：访问A的8000端口就可以访问到B的8888端口，所有发送到A:8000的数据都会原封不动地转发到B:8888&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在A上必然有一个程序在监听8000端口，每当有连接或者数据过来的时候，他就对B的8888发起连接或者发送数据&lt;/li&gt;
+&lt;li&gt;由于A无法访问到B，那么必须得B主动在A和B之间建一个持久的连接，这里称之为Turnnel（隧道），A就是隧道的上游（TUp），B为下游TDown&lt;/li&gt;
+&lt;li&gt;当有一个程序连接到A:8000的时候（把这个连接编号为CS1），TUp就可以通过Turnnel通知TDown过来一个新的连接需要转发，TDown就主动对B:8888发起连接（CC1），这里CS1和CS2就是对应的，也就是说CS1中的数据都应该发送到CC1，CC1中的数据也应该发送到CS1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总结一下：A中需要监听两个端口，一个8000用来转发，一个xxxx用来供B连接；B中需要运行一个程序用来发起对B:8888进行连接&lt;/p&gt;
+&lt;h2 id=&quot;3-_SSH的实现&quot;&gt;3. SSH的实现&lt;/h2&gt;
+&lt;p&gt;使用SSH来从B登录到A的时候，必然需要B来主动向A发起一条持久的TCP连接，这条连接就可以用来做Turnnel；ssh包括一个server和一个client，这样也就满足了上边分析的条件了server可以监听8000，client用来连接B的8888&lt;/p&gt;
+&lt;p&gt;使用ssh建立端口转发非常简单，只需要在B中执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh -R &lt;span class=&quot;string&quot;&gt;[[A]]&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;8000&lt;/span&gt;:[B]:&lt;span class=&quot;number&quot;&gt;8888&lt;/span&gt; user@[A]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[A],[B]分别表示A和B的IP地址&lt;/p&gt;
+&lt;p&gt;上述命令中A的地址可以省略&lt;/p&gt;
+&lt;p&gt;[A]中默认会绑定在回环地址上，通过指定IP可以使其绑定在其他可用地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这时候如果去访问A:8000就可以看到B:8888接到了新的连接，这样一条SSH远程端口转发就完成了&lt;/p&gt;
+&lt;h2 id=&quot;4-_结束语&quot;&gt;4. 结束语&lt;/h2&gt;
+&lt;p&gt;根据上面的分析，自己也可以写一个简单的程序来完成类似的功能&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 03 Jan 2015 02:56:01 +0800</pubDate>
+        <link>http://blog.sherwinkoo.net/linux/2015/01/03/ssh-port-forward.html</link>
+        <guid isPermaLink="true">http://blog.sherwinkoo.net/linux/2015/01/03/ssh-port-forward.html</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>2013总结</title>
+        <description>&lt;p&gt;转眼一年时间又过去了，没有赶得及在13年末尾完成这个总结，纯粹是拖延症在作祟，而且拖延症也是2013年的主题。&lt;/p&gt;
+&lt;p&gt;13年1月初，我放弃了坚持了半年的创业，仓皇逃离深圳。我是12年7月去的深圳，不过在大学毕业之前也去了一个月左右，加起来应该是7个月左右。说是逃离，一点也不为过，跟我之前的23年类似，我对于短期看不到希望的事情总是没有坚持下来的勇气，在跟学长说完之后就很仓促地离开了。&lt;/p&gt;
+&lt;p&gt;1月~2月之间，我的主要工作就是玩了，也没想着找工作。而且这期间我知道了我曾经追求的女生已经名花有主，这对我打击很大，因此也没心情找工作。曾经就差那么一点点，我放弃了到手的爱情，说起来真是犯贱！落得现在仍旧是孤家寡人一个，这便是报应吧。过完年之后，我妈带着我做了牙齿整形，把以前歪七扭八的门牙换成了整齐的烤瓷，大概老妈是怕我找不到媳妇吧。。。不过这牙齿还真是我从小的一个心病，现在心病解决了，我终于可以放声大笑了，咩哈哈哈！！！&lt;/p&gt;
+&lt;p&gt;3月回到北京开始找工作。我对自己的技术还是有些信心的，不过打小养成的自卑心理还是让我在通过第一个offer之后立马就从了现在的这家公司，现在悔的肠子都清了。这家公司算是一个安全类的公司吧，主要是做反外挂的，当时一心就想着要做安全，一来是喜欢逆向工程，二来也本着小公司可以增强技术，所以就很痛快地答应了。还是too young，to simple啊。&lt;/p&gt;
+&lt;p&gt;/&lt;em&gt; 插曲：在深圳的最后日子里，由于对创业不抱希望，心中郁闷就开始玩英雄联盟，这就为我这一年的荒废埋下了伏笔 &lt;/em&gt;/&lt;/p&gt;
+&lt;p&gt;4月~8月的这段日子里，跟几个大学同学住在一起，大家没事一起做做饭，玩玩dota，日子也很欢乐。同时由于刚到公司，对外挂也不熟悉，所以干劲也是很足。记得第一个任务是在ring3层检测进程中的hook点，话说当时我连hook怎么做都不知道，PE结构更是忘得一干二净。于是边学边做，居然也勉强弄出个程序来。当时对于分析PE文件的时候我居然是手动读文件，读一点分析一点，逻辑写的那叫一个复杂。现在想想，直接用内存映射文件，很容易就搞定了。。。后来还用duilib给这个功能做了个界面，算是交差了。&lt;/p&gt;
+&lt;p&gt;后来就开始第一次写驱动了，当时是写了一个叫做“防封包防断网”的功能，其实叫网络数据加密更贴切一点。其实也就是在上层拦截send和sendto函数，把数据加密，然后下层拦截afd驱动的对应函数，把数据解密。上层写了3中HOOK：inline，Iat，自定义（也就是更深一点的inline hook），最后写完了，但是bug也不少，蓝屏也有好几次。后来也多次修改过，不过最终也没加入到公司的反外挂产品中。不过这个项目也是让我对hook，驱动开发，以及编写健壮的程序有了深入的理解。&lt;/p&gt;
+&lt;p&gt;再后来就是一个很无聊，很苦逼的任务，修改公司的一个加壳软件。由于公司产品主要是面向韩国，马来西亚，美国这些地方，但是这个加壳软件中居然是用的是多字节字符编码，而不是unicode，这就导致游戏加壳之后再没有中文安装包的英文系统上出现乱码问题。所以我的任务就是把里面的char全部改成wchar_t！这个想着很简单，不就是改个类型嘛，可是其中用到了一些开源库比如lua虚拟机就只支持char字符串，还有日志功能也是，而且当时我对公司的这一套产品也不熟，经常出现的问题不是驱动加载不起来，而且有时也不是我的问题。说到这里，我就不得不吐槽一下，公司的各个产品都没有文档，需求文档都没有，每个需求都是boss一个人说了算，完全是口述！最后改了大概有一个星期，基本都改完了。而我的收获就是能用unicode就一定要用unicode，千万不要在意多占用的那一点点内存，并且我对加壳也有了一些简单的了解。&lt;/p&gt;
+&lt;p&gt;这期间，我最害怕的就是开会。因为只要一开会，boss就骂人拍桌子，这当中我也曾三番五次想到辞职，不过还是忍住了。我被boss拍桌子拍的最厉害的一段时间就是我在做一个基础框架的时候，当时最初的需求是可以在Packer加载xbin文件（其实就是一个精简的PE文件），但是每开一次会boss的需求就会增加一些，最后的最后就成了一个xbin加载运行的基础框架了。就像是最开始要我做一个手推车，后来改成小汽车，最后成了高级跑车了。。。不过最后虽然做完了，但是被仍在一遍就没怎么用了，每次来个新人就让他们写个xbin加个功能。公司这样的烂尾项目不在少数，有时候就感觉挺无奈的。&lt;/p&gt;
+&lt;p&gt;8月的时候公司搬家了，而这也拉开了我苦逼的加班序幕。刚搬来的一阵子，我还是在修改那个加载xbin的框架，没事写几个xbin，丰富一下xbin的运行时库，还写了一个用来做驱动测试的框架，然后。。。也烂尾了。。。之后我就被拉到了反外挂组。&lt;/p&gt;
+&lt;p&gt;本想着公司做了这么多年的反外挂了，技术积累应该挺多了，后来发现是我想多了。在反外挂组的这几个月的时间，我的主要任务就是外挂更新了，我们就想办法把它搞掉。主要方法无非就是文件校验，hook检测，GUI线程检测，窗口检测之类的，都是小功能，没什么好说的。重要的功能就俩：VMP虚拟机检测以及鼠标键盘保护。当时写VMP检测的时候就是看了很久的VMP反汇编，找特征码，最后采用统计的方法配合线程检测以及窗口检测来检测外挂的，反正最后的误判率是很低的，效果还是不错的。我也因此获得了V神的称号。。。&lt;/p&gt;
+&lt;p&gt;后来就被拉到浏览器组，做一些浏览器的调研。主要还是在搞Flash插件方面的东西，现在还是没什么头绪，慢慢弄吧。&lt;/p&gt;
+&lt;p&gt;年初的时候不知怎么就和室友谈起了骑行川藏这件事，当时就齐刷刷地达成了一致。后来也没为这事反悔，一直都在为明年的出发做准备，周末有时间都会出去骑一骑，倒也不错。八月十五一起买了车子，三辆公爵600，后来我又买了D7000，川藏路上如此美景，不记录下来怎么成呢。等明年三月或者八月，我们就出发，我想这也算是此生的一次不遗憾的体验了。&lt;/p&gt;
+&lt;p&gt;一篇流水账下来，2013年就这样了，不好不坏。不管怎么样，2014年我会活得更加精彩，更加充实一些！&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 07 Jan 2014 02:47:32 +0800</pubDate>
+        <link>http://blog.sherwinkoo.net/%E7%94%9F%E6%B4%BB/2014/01/07/2013-summary.html</link>
+        <guid isPermaLink="true">http://blog.sherwinkoo.net/%E7%94%9F%E6%B4%BB/2014/01/07/2013-summary.html</guid>
+        
+        
+        <category>生活</category>
+        
+      </item>
+    
+  </channel>
+</rss>
