@@ -11,13 +11,7 @@ permalink: /about/
  - 技术博客：http://blog.sherwinkoo.net
  - Github: http://github.com/sherwinkoo
 
- - 期望职位：Python高级程序员
- - 期望薪资：税前月薪18k~22k
- - 期望城市：北京
- 
- 
 # 联系方式
-- 手机：15710080815
 - Email：sherwinkoo@126.com
 - QQ：695817458
 
@@ -84,7 +78,7 @@ permalink: /about/
 
 
 # 开源项目
- - [HTML5-ARPG](http://github.com/sherwinkoo/html5-arpg-game) : 项目的简要说明，Star和Fork数多的可以注明
+- [HTML5-ARPG](http://github.com/sherwinkoo/html5-arpg-game) :使用HTML5编写的ARPG页游前端
 
 
 # 技能清单
