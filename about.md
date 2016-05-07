@@ -76,7 +76,7 @@ permalink: /about/
 
 
 # 开源项目
- - [HTML5-ARPG](http://github.com/sherwinkoo/html5-arpg-game) : 项目的简要说明，Star和Fork数多的可以注明
+- [HTML5-ARPG](http://github.com/sherwinkoo/html5-arpg-game) :使用HTML5编写的ARPG页游前端
 
 
 # 技能清单
