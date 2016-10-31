@@ -1,23 +1,15 @@
 ---
 layout: page
-title: 关于我
 permalink: /about/
 ---
 
-# 个人信息
  - 孙建翔／男／1989 
  - 本科／大连理工大学软件学院／网络安全 
  - 工作年限：3年
  - 技术博客：http://blog.sherwinkoo.net
  - Github: http://github.com/sherwinkoo
 
- - 期望职位：Python高级程序员
- - 期望薪资：税前月薪18k~22k
- - 期望城市：北京
- 
- 
 # 联系方式
-- 手机：15710080815
 - Email：sherwinkoo@126.com
 - QQ：695817458
 

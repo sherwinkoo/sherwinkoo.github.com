@@ -2,22 +2,19 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">最近文字</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">通过<a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>订阅</p>
-
+{% assign index = true %}
+<div itemscope itemtype="http://schema.org/Blog">
+{% for post in paginator.posts %}
+{% assign content = post.excerpt %}
+    <article class="post post-list" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">{% include article.html %}</article>
+{% endfor %}
 </div>
+<nav id="pagenavi">
+    {% if paginator.previous_page %}
+        <a href="{{paginator.previous_page}}" class="prev">上一页</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a href="{{paginator.next_page}}" class="next">下一页</a>
+    {% endif %}
+    <div class="center"><a href="{{ root_url }}/archives.html">博客归档</a></div>
+</nav>
