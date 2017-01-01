@@ -3,20 +3,12 @@ layout: page
 permalink: /about/
 ---
 
- - 孙建翔／男／1989 
- - 本科／大连理工大学软件学院／网络安全 
- - 工作年限：3年
- - 技术博客：http://blog.sherwinkoo.net
- - Github: http://github.com/sherwinkoo
-
-# 联系方式
-- Email：sherwinkoo@126.com
-- QQ：695817458
-
-
 # 工作经历
+
 ## 北京爱视游科技文化有限公司 （ 2014年12月 ~ 2016年4月 ）
+
 ### 葡萄游戏厅－服务端开发 
+
 产品为智能电视端的游戏平台，提供各种支持遥控器和手柄的游戏。
 
 后端项目中使用了Django和Cyclone两个Web框架，后期由我独立负责开发，维护以及优化。主要内容有：
